@@ -2,13 +2,16 @@
     font-family: "ＭＳ Ｐゴシック", serif;
 }
 
+body {
+    background-image: url('stars4.gif');
+}
+
 #container {
     width: 800px;
     margin: 0 auto;
 }
 
 #header {
-    height: 20%;
     height: 130px;
 
     border-style: double;
@@ -23,7 +26,6 @@
 
 #body {
     display: flex;
-
     border-style: double;
 }
 
@@ -35,6 +37,7 @@
 }
 
 #right {
+    color: white;
     width: 25%;
     padding: 15px 2px 15px 2px;
 
@@ -43,18 +46,50 @@
 
 #content {
     width: 80%;
-    padding: 15px 2px 15px 2px;
-
-    border-style: double;
+    margin-right: 3px;
 }
 
+#content_section {
+    margin-bottom: 20px;
+
+    padding: 5px 20px 20px 20px;
+
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(255, 0, 89); 
+    border-radius: 5px;
+
+    background-image: url('water.jpg');
+}
 
 #card_holder {
-    border-style: double;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
     width: 400px;
-    height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-style: double;
+    border-width: 4 px;
     border-radius: 25px;
+
     text-align: center;
+}
+
+#card_question {
+    height: 15%;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#card_result {
+    height: 70%;
+}
+
+#content_section_header {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #card_separator {
@@ -62,36 +97,28 @@
 }
 
 button.click { 
-    background:none; 
-    border:none; 
+    width: 90%;
+    height: 30px;
+
+    border: none;
+    font-style: oblique;
+    font-size: x-large;
+
+    background: none;
+}
+
+button.click:hover{ 
+    width: 90%;
+    height: 30px;
+
+    font-style: oblique;
+    font-size: x-large;
+
+    background-color: rgba(255, 255, 255, 0.2)
 }
 
 #footer {
     height: 25px;
-
-    border-style: double;
+    color: white;
 }
-
-div.main_block {
-    width: 800px;
-
-    text-align: left;
     
-    border-style: double;
-}
-
-div.card {
-    width: 500px;
-    height: 400px;
-
-    border-style: double;
-}
-
-p.main_text {
-    margin: 15px;
-}
-
-button.link { 
-    background:none; border:none; 
-}
-  

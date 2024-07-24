@@ -13,38 +13,59 @@
             <div id="header">
             </div>
             <div id="bar" align="center">
-                <img src="light.gif">
+                <img height=30px src="blinkies-hatsune-miku.gif">
+                <img height=30px src="light.gif">
+                <img height=30px src="mikusmol.png">
             </div>
             <div id="body">
                 <div id="content">
-                    <center>
-                        <div id="card_holder">
-                            seven
+                    <section id="content_section">
+                        <h1 style="display: inline;" id="content_section_header">Card game</h1>
+                        <img id="content_section_icon" src="tackred.gif">
 
-                            <button class="click">にじゅうに</button>
-                            <hr id="card_separator">
-                            <button class="click">じゅういち</button>
-                            <hr id="card_separator">
-                            <button class="click">に</button>
-                            <hr id="card_separator">
-                            <button class="click">ひゃく</button>
-                        </div>
-                    </center>
+                        <p>
+                            Hey, so basically this little web application allows you to revise vocabulary of desired language.
+                        </p>
+
+
+                        <form action="/action_page.php">
+                            <label for="cars"><u>Choose vocabulary collection</u></label>
+                            <select id="cars" name="cars">
+                                <option value="animals">animals</option>
+                                <option value="numbers">numbers</option>
+                            </select>
+                            <input type="submit" value="Apply">
+                        </form>
+
+                        <center>
+                            <div id="card_holder">
+                                <div id="card_question">
+                                    What word matches 'seven' ?
+                                    <hr id="card_separator">
+                                </div>
+                                
+                                <div id="card_result">
+                                    <button class="click">にじゅうに</button>
+                                    <hr id="card_separator">
+                                    <button class="click">じゅういち</button>
+                                    <hr id="card_separator">
+                                    <button class="click">に</button>
+                                    <hr id="card_separator">
+                                    <button class="click">ひゃく</button>
+                                </div>
+                            </div>
+                            Streak 15/30
+                            <button>reset streak</button>
+                            <button>get hint</button>
+                            <button>next</button>
+                        </center>
+                    </section>
                 </div>
                 <aside id="right">
-                    <label>Collections</label>
-                    <div id="collection_container">
-                        <ul>
-                            <li>Coffee</li>
-                            <li>Tea</li>
-                            <li>Milk</li>
-                        </ul>
-                    </div>
-
                     <form id="form-id">
                         <label for="cars">Load database from json</label>
                         <input type="text" id="text_submit"/>
-                        <button id="submit_button">submit</button>
+                        <button id="submit_button">Load</button>
                     </form>
 
                     <form action="/action_page.php">
@@ -52,7 +73,7 @@
                         <select id="cars" name="cars">
                           <option value="gnome_japanese">Gnome Japanese</option>
                         </select>
-                        <input type="submit">
+                        <input type="submit" value="Select">
                     </form>
 
                     <img src="mikuapproved.gif">
