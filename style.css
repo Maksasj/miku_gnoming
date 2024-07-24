@@ -1,0 +1,80 @@
+* {
+    font-family: "ＭＳ Ｐゴシック", serif;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 20%;
+    height: 130px;
+
+    border-style: double;
+}
+
+#bar {
+    height: 30px;
+    margin: 0 auto;
+
+    border-style: double;
+}
+
+#body {
+    display: flex;
+
+    border-style: double;
+}
+
+#left {
+    width: 20%;
+    padding: 15px 2px 15px 2px;
+
+    border-style: double;
+}
+
+#right {
+    width: 20%;
+    padding: 15px 2px 15px 2px;
+
+    border-style: double;
+}
+
+#content {
+    width: 80%;
+    padding: 15px 2px 15px 2px;
+
+    border-style: double;
+}
+
+
+#footer {
+    height: 25px;
+
+    border-style: double;
+}
+
+div.main_block {
+    width: 800px;
+
+    text-align: left;
+    
+    border-style: double;
+}
+
+div.card {
+    width: 500px;
+    height: 400px;
+
+    border-style: double;
+}
+
+p.main_text {
+    margin: 15px;
+}
+
+button.link { 
+    background:none; border:none; 
+}
+  
