@@ -1,6 +1,10 @@
 console.log("Poggers !");
 
-var database = {
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+var active_database = {
     "collections": {
         "animals": {
             "description": "This is a animal collection",

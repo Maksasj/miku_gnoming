@@ -35,7 +35,7 @@
 }
 
 #right {
-    width: 20%;
+    width: 25%;
     padding: 15px 2px 15px 2px;
 
     border-style: double;
@@ -48,6 +48,23 @@
     border-style: double;
 }
 
+
+#card_holder {
+    border-style: double;
+    width: 400px;
+    height: 300px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#card_separator {
+    width: 90%;
+}
+
+button.click { 
+    background:none; 
+    border:none; 
+}
 
 #footer {
     height: 25px;
