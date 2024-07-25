@@ -108,37 +108,12 @@ submit_button.addEventListener("click", function (event) {
     var text_submit = document.getElementById("text_submit");
     const obj = JSON.parse(text_submit.value);
 
-    console.log(obj);
-
     event.preventDefault();
 });
 
 var next_button = document.getElementById("next_button");
 next_button.addEventListener("click", function (event) {
-    let words = active_database["collections"]["numbers"]["words"];
-    var random_word = words[getRandomInt(words.length)]
-
-    var card_question = document.getElementById("card_question");
-    card_question.innerHTML = "What word matches '" + random_word["word"] + "' ?";
-
-    let variants = []
-
-    variants.push(random_word["variants"][0]);
-    active_answer = random_word["variants"][0];
-    console.log(active_answer);
-
-    for(let i = 0; i < 3; ++i) {
-        var thing = words[getRandomInt(words.length)]["variants"][0];
-        variants.push(thing);
-    }
-
-    var card_result = document.getElementById("card_result");
-    card_result.innerHTML = "";
-
-    shuffleArray(variants);
-
-    for(let i = 0; i < 4; ++i)
-        card_result.innerHTML += "<hr id='card_separator'></hr><button class='click'>" + variants[i] + "</button>" + ""
+    showRandomQuestion();
 });
 
 // Reset button
@@ -146,6 +121,8 @@ var reset_streak_button = document.getElementById("reset_streak_button");
 reset_streak_button.addEventListener("click", function (event) {
     score = 0;
     total_answers = 0;
+
+    updateScore();
 });
 
 // Get hint button
@@ -154,3 +131,59 @@ get_hint_button.addEventListener("click", function (event) {
     console.log("Todo !");
 });
 
+function showRandomQuestion() {
+    let words = active_database["collections"]["numbers"]["words"];
+    var random_word = words[getRandomInt(words.length)]
+
+    var card_variants = document.getElementsByClassName("card_variant");
+    let variant_count = card_variants.length;
+
+    var card_question = document.getElementById("card_question");
+    card_question.innerHTML = "What is right word for '" + random_word["word"] + "' ?";
+
+    let variants = []
+
+    variants.push(random_word["variants"][0]);
+    active_answer = random_word["variants"][0];
+
+    for(let i = 0; i < variant_count - 1; ++i) {
+        var thing = words[getRandomInt(words.length)]["variants"][0];
+        variants.push(thing);
+    }
+
+    shuffleArray(variants);
+
+    for(let i = 0; i < variants.length; ++i)
+        card_variants[i].innerHTML = variants[i]; 
+}
+
+showRandomQuestion();
+
+function updateScore() {
+    var card_streak = document.getElementById("card_streak");
+    card_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + (100 * score / (total_answers + 1)).toFixed(1) + "%";
+}
+
+updateScore();
+
+// Card variants
+var card_variants = document.getElementsByClassName("card_variant");
+console.log(card_variants);
+for(var variant of card_variants) {
+    variant.addEventListener("click", function (event) {
+        let variant_text = event.target.innerHTML;
+
+        // Right answer
+        if(active_answer === variant_text) {
+
+            showRandomQuestion();
+            ++score;
+        } else { // Wrong answer
+
+        }
+
+        ++total_answers;
+        
+        updateScore();
+    });
+}

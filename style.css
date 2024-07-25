@@ -123,6 +123,16 @@ body {
     text-shadow: 2px 2px 3px blue;
 }
 
+button.content_button {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(38, 0, 255);
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-width: 2px;
+    text-shadow: 2px 2px 3px white;
+}
+
 #card_holder {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -141,21 +151,21 @@ body {
     height: 15%;
     font-weight: bold;
     font-size: x-large;
+    margin-bottom: 15px;
 }
 
 #card_result {
     height: 70%;
 }
 
-#card_separator {
-    width: 90%;
-}
-
-button.click { 
+div.card_variant {
     width: 90%;
     height: 30px;
 
-    border: none;
+    padding: 10px 0px 10px 0px;
+    margin: 0px auto 0px auto;
+    border-style: solid none none none;
+
     font-style: oblique;
     font-size: x-large;
     color: white;
@@ -163,7 +173,7 @@ button.click {
     background: none;
 }
 
-button.click:hover{ 
+div.card_variant:hover {
     width: 90%;
     height: 30px;
 
@@ -172,6 +182,10 @@ button.click:hover{
     color: white;
 
     background-color: rgba(255, 255, 255, 0.2)
+}
+
+#card_streak {
+    display: inline;
 }
 
 #footer {
