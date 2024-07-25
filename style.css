@@ -13,10 +13,6 @@ body {
 
 #header {
     height: 130px;
-    font-size: 80px;
-    font-style: italic;
-    font-weight: bold;
-    color: rgb(255, 0, 98)
 }
 
 #bar {
@@ -33,24 +29,77 @@ body {
 
 #left {
     width: 25%;
-    padding: 15px 2px 15px 2px;
+}
 
-    border-style: double;
+#left_section {
+    margin-bottom: -10px;
+    padding: 5px 5px 15px 5px;
     background-color: black;
+    color: yellow;
+
+    border-color: greenyellow;
+    border-radius: 5px 5px 0px 0px;
+    border-width: 3px;
+    border-style: ridge ridge none ridge;
+}
+
+#left_section_header {
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+#left_section_header_globus {
+    margin-bottom: -10px;
+}
+
+#left_navigation_link {
     color: yellow;
 }
 
-#right {
-    color: white;
-    width: 25%;
-    padding: 15px 2px 15px 2px;
+#left_navigation_button {
+    color: black;
+    background-color: rgb(66, 255, 59);
+    border-color: yellow;
+    border-radius: 5px;
+    border-width: 5px;
+    width: 100%;
+}
 
-    border-style: double;
+#left_section_hr {
+    display:block;
+    border:0px;
+    height:10px;
+    background-image:url('0126-slime-ezgif.com-crop.gif');
+}
+
+#right {
+    width: 25%;
+}
+
+#right_section {
+    margin-bottom: -10px;
+    padding: 15px 2px 15px 2px;
+    background-color: black;
+    color: rgb(251, 0, 255);
+
+    border-image: linear-gradient(to bottom, rgb(0, 255, 255), rgb(251, 0, 255)) 1;
+
+    border-radius: 5px 5px 0px 0px;
+    border-width: 3px;
+    border-style: ridge ridge none ridge;
+}
+
+#right_section_hr {
+    display:block;
+    border:0px;
+    height:10px;
+    background-image:url('0126-slime-ezgif.com-effects.gif');
 }
 
 #content {
     width: 80%;
     margin-right: 3px;
+    margin-left: 3px;
 }
 
 #content_section {
@@ -59,11 +108,11 @@ body {
     padding: 5px 20px 20px 20px;
 
     border: 5px;
-    border-style: solid;
-    border-color: rgb(255, 0, 89); 
+    border-style: ridge;
+    border-color: lightskyblue; 
     border-radius: 5px;
-
-    background-image: url('water.jpg');
+    background-color: black;
+    color: white
 }
 
 #card_holder {
@@ -77,7 +126,6 @@ body {
     border-style: double;
     border-width: 4 px;
     border-radius: 25px;
-
     text-align: center;
 }
 
@@ -107,6 +155,7 @@ button.click {
     border: none;
     font-style: oblique;
     font-size: x-large;
+    color: white;
 
     background: none;
 }
@@ -117,6 +166,7 @@ button.click:hover{
 
     font-style: oblique;
     font-size: x-large;
+    color: white;
 
     background-color: rgba(255, 255, 255, 0.2)
 }
@@ -124,5 +174,13 @@ button.click:hover{
 #footer {
     height: 25px;
     color: white;
+
+    padding-bottom: 2px;
+
+    border: 2px;
+    border-style: ridge;
+    border-color: rgb(255, 0, 64); 
+    border-radius: 5px;
+    background-color: black;
 }
     
