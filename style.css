@@ -46,6 +46,7 @@ body {
 #left_section_header {
     margin-top: 2px;
     margin-bottom: 15px;
+    text-shadow: 3px 3px red;
 }
 
 #left_section_header_globus {
@@ -62,6 +63,7 @@ body {
     border-color: yellow;
     border-radius: 5px;
     border-width: 5px;
+    margin-bottom: 2px;
     width: 100%;
 }
 
@@ -115,6 +117,12 @@ body {
     color: white
 }
 
+#content_section_header {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 3px blue;
+}
+
 #card_holder {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -137,11 +145,6 @@ body {
 
 #card_result {
     height: 70%;
-}
-
-#content_section_header {
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 #card_separator {

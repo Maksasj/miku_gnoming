@@ -1,9 +1,19 @@
-console.log("Poggers !");
+// Utils
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+// Global state
+var active_answer = ""
+var score = 0;
+var total_answers = 0;
 var active_database = {
     "collections": {
         "animals": {
@@ -93,12 +103,9 @@ var active_database = {
     }
 };
 
-var form = document.getElementById("form-id");
-
-var text_submit = document.getElementById("text_submit");
 var submit_button = document.getElementById("submit_button");
-
 submit_button.addEventListener("click", function (event) {
+    var text_submit = document.getElementById("text_submit");
     const obj = JSON.parse(text_submit.value);
 
     console.log(obj);
@@ -106,38 +113,44 @@ submit_button.addEventListener("click", function (event) {
     event.preventDefault();
 });
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
 var next_button = document.getElementById("next_button");
-
-var card_question = document.getElementById("card_question");
-var card_result = document.getElementById("card_result");
-
 next_button.addEventListener("click", function (event) {
     let words = active_database["collections"]["numbers"]["words"];
     var random_word = words[getRandomInt(words.length)]
 
+    var card_question = document.getElementById("card_question");
     card_question.innerHTML = "What word matches '" + random_word["word"] + "' ?";
 
     let variants = []
 
     variants.push(random_word["variants"][0]);
+    active_answer = random_word["variants"][0];
+    console.log(active_answer);
 
     for(let i = 0; i < 3; ++i) {
         var thing = words[getRandomInt(words.length)]["variants"][0];
         variants.push(thing);
     }
 
+    var card_result = document.getElementById("card_result");
     card_result.innerHTML = "";
 
     shuffleArray(variants);
 
-    for(let i = 0; i < 4; ++i) {
+    for(let i = 0; i < 4; ++i)
         card_result.innerHTML += "<hr id='card_separator'></hr><button class='click'>" + variants[i] + "</button>" + ""
-    }
 });
+
+// Reset button
+var reset_streak_button = document.getElementById("reset_streak_button");
+reset_streak_button.addEventListener("click", function (event) {
+    score = 0;
+    total_answers = 0;
+});
+
+// Get hint button
+var get_hint_button = document.getElementById("get_hint_button");
+get_hint_button.addEventListener("click", function (event) {
+    console.log("Todo !");
+});
+
