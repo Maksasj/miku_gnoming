@@ -13,8 +13,10 @@ body {
 
 #header {
     height: 130px;
-
-    border-style: double;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(255, 0, 98)
 }
 
 #bar {
