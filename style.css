@@ -1,5 +1,6 @@
 * {
     font-family: "ＭＳ Ｐゴシック", serif;
+    letter-spacing: 1.5px;
 }
 
 body {
@@ -98,6 +99,12 @@ body {
     background-image:url('assets/0126-slime-ezgif.com-effects.gif');
 }
 
+#right_section_header {
+    margin: 0px 1px 3px 1px;
+    text-shadow: 3px 3px purple;
+    color: rgb(0, 255, 255);
+}
+
 #content {
     width: 80%;
     margin-right: 3px;
@@ -118,9 +125,24 @@ body {
 }
 
 #content_section_header {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 3px blue;
+    margin: 0 auto;
+
+    border-style: ridge;
+    border-color: lightblue; 
+    text-shadow: 3px 3px 3px blue;
+    border-width: 3px;
+
+    font-size: 30px;
+
+    background-image: linear-gradient(to bottom, rgba(0, 157, 255, 255), rgba(0, 0, 0, 0)) ;
+
+    color: white;
+}
+
+#content_section_header_h3 {
+    display: inline;
+    margin: 0 auto;
+    font-size: x-large;
 }
 
 button.content_button {
@@ -186,6 +208,11 @@ div.card_variant:hover {
 
 #card_streak {
     display: inline;
+}
+
+#miku_dancing {
+    float: right;
+    margin: 0 0 0 15px;
 }
 
 #footer {
