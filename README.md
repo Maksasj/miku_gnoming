@@ -1,4 +1,4 @@
-<img src="miku_gnoming_logo.png">
+<img src="assets/miku_gnoming_logo.png">
 
 # 🩵 miku gnoming 🎙️
 > there we just miku gnoming 
