@@ -9,6 +9,12 @@ Little **miku gnoming** project, there we just doin **miku gnoming**. This idea 
 3. Video inspiration [You Should Check Out the Indie Web](https://youtu.be/rTSEr0cRJY8?si=nE7hPqMipRgkSW7y)
 4. Neocities link [neocities.org](https://neocities.org/)
 
+> This time miku gnoming is a new gnoming framework.
+
+Cool looking widgets 
+<img src="https://img.shields.io/github/stars/Maksasj/miku_gnoming" alt="stars">
+<img src="https://img.shields.io/github/license/Maksasj/miku_gnoming" alt="build">
+
 ## Philosophy
 > \> That is a miku gnoming ?<br>
 > \> Idk
