@@ -1,0 +1,88 @@
+{
+    "collections": {
+        "animals": {
+            "description": "This is a animal collection",
+            "appearance": "yellow",
+            "words" : [
+                { "frog": "カエル" },
+                { "lion": "ライオン" },
+                { "panda": "パンダ"},
+                { "octopus": "タコ"}
+            ]
+        },
+        "numbers": {
+            "description": "This is a numbers collection",
+            "appearance": "blue",
+            "words" : [
+                { 
+                    "word": "one",
+                    "variants": [ "いち" ] 
+                },
+                { 
+                    "word": "two",
+                    "variants": [ "に" ] 
+                },
+                { 
+                    "word": "three",
+                    "variants": [ "さん" ] 
+                },
+                { 
+                    "word": "four",
+                    "variants": [ "し" ] 
+                },
+                { 
+                    "word": "five",
+                    "variants": [ "ご" ] 
+                },
+                { 
+                    "word": "six",
+                    "variants": [ "ろく" ] 
+                },
+                { 
+                    "word": "seven",
+                    "variants": [ "しち" ] 
+                },
+                { 
+                    "word": "eight",
+                    "variants": [ "はち" ] 
+                },
+                {   
+                    "word": "nine",
+                    "variants": [ "きゅう" ] 
+                },
+                { 
+                    "word": "ten",
+                    "variants": [ "じゅう" ] 
+                },
+                {   
+                    "word": "eleven",
+                    "variants": [ "じゅういち" ] 
+                },
+                { 
+                    "word": "twelve",
+                    "variants": [ "じゅうに" ] 
+                },
+                { 
+                    "word": "twenty",
+                    "variants": [ "にじゅう" ] 
+                },
+                { 
+                    "word": "twenty one",
+                    "variants": [ "にじゅうに" ]
+                },
+                { 
+                    "word": "thirty",
+                    "variants": [ "さんじゅう" ] 
+                },
+                { 
+                    "word": "forty",
+                    "variants": [ "しじゅう" ] 
+                },
+                { 
+                    "word": "one hundred",
+                    "variants": [ "ひゃく" ] 
+                }
+            ]
+        }
+    }
+}

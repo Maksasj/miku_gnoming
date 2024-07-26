@@ -14,94 +14,19 @@ function getRandomInt(max) {
 var active_answer = ""
 var score = 0;
 var total_answers = 0;
-var active_database = {
-    "collections": {
-        "animals": {
-            "description": "This is a animal collection",
-            "appearance": "yellow",
-            "words" : [
-                { "frog": "カエル" },
-                { "lion": "ライオン" },
-                { "panda": "パンダ"},
-                { "octopus": "タコ"}
-            ]
-        },
-        "numbers": {
-            "description": "This is a numbers collection",
-            "appearance": "blue",
-            "words" : [
-                { 
-                    "word": "one",
-                    "variants": [ "いち" ] 
-                },
-                { 
-                    "word": "two",
-                    "variants": [ "に" ] 
-                },
-                { 
-                    "word": "three",
-                    "variants": [ "さん" ] 
-                },
-                { 
-                    "word": "four",
-                    "variants": [ "し" ] 
-                },
-                { 
-                    "word": "five",
-                    "variants": [ "ご" ] 
-                },
-                { 
-                    "word": "six",
-                    "variants": [ "ろく" ] 
-                },
-                { 
-                    "word": "seven",
-                    "variants": [ "しち" ] 
-                },
-                { 
-                    "word": "eight",
-                    "variants": [ "はち" ] 
-                },
-                {   
-                    "word": "nine",
-                    "variants": [ "きゅう" ] 
-                },
-                { 
-                    "word": "ten",
-                    "variants": [ "じゅう" ] 
-                },
-                {   
-                    "word": "eleven",
-                    "variants": [ "じゅういち" ] 
-                },
-                { 
-                    "word": "twelve",
-                    "variants": [ "じゅうに" ] 
-                },
-                { 
-                    "word": "twenty",
-                    "variants": [ "にじゅう" ] 
-                },
-                { 
-                    "word": "twenty one",
-                    "variants": [ "にじゅうに" ]
-                },
-                { 
-                    "word": "thirty",
-                    "variants": [ "さんじゅう" ] 
-                },
-                { 
-                    "word": "forty",
-                    "variants": [ "しじゅう" ] 
-                },
-                { 
-                    "word": "one hundred",
-                    "variants": [ "ひゃく" ] 
-                }
-            ]
-        }
-    }
-};
+var active_database = {};
+
+// Start application
+async function startApplication() {
+    fetch("./japanese.json")
+        .then((response) => response.json())
+        .then((json) => active_database = json)
+        .then(() => {
+            // Update UI
+            showRandomQuestion();
+            updateScore();
+        });
+}
 
 var submit_button = document.getElementById("submit_button");
 submit_button.addEventListener("click", function (event) {
@@ -157,18 +82,13 @@ function showRandomQuestion() {
         card_variants[i].innerHTML = variants[i]; 
 }
 
-showRandomQuestion();
-
 function updateScore() {
     var card_streak = document.getElementById("card_streak");
     card_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + (100 * score / (total_answers + 1)).toFixed(1) + "%";
 }
 
-updateScore();
-
 // Card variants
 var card_variants = document.getElementsByClassName("card_variant");
-console.log(card_variants);
 for(var variant of card_variants) {
     variant.addEventListener("click", function (event) {
         let variant_text = event.target.innerHTML;
@@ -187,3 +107,5 @@ for(var variant of card_variants) {
         updateScore();
     });
 }
+
+startApplication()
