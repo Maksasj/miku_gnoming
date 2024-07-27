@@ -1,26 +1,73 @@
 {
+    "name": "Japanese",
+    "description": "my japanese miku gnoming dataset",
+    "extensions": [ "mg_appearance", "mg_appearance_emoji" ],
     "collections": [
         {
-            "name": "numbers",
-            "description": "Number collection, 1-10",
-            "appearance": "blue",
+            "name": "digits",
+            "description": "Digits collection",
+            "appearance": {
+                "color": "blue",
+                "emoji": "🔢"
+            },
             "cases" : [
                 { "value": [ [ "one" ], [ "いち" ] ] },
                 { "value": [ [ "two" ], [ "に" ] ] },
                 { "value": [ [ "three" ], [ "さん" ] ] },
-                { "value": [ [ "four" ], [ "し" ] ] },
+                { "value": [ [ "four" ], [ "し", "よん" ] ] },
                 { "value": [ [ "five" ], [ "ご" ] ] },
                 { "value": [ [ "six" ], [ "ろく" ] ] },
-                { "value": [ [ "seven" ], [ "しち" ] ] },
+                { "value": [ [ "seven" ], [ "しち", "なな" ] ] },
                 { "value": [ [ "eight" ], [ "はち" ] ] },
-                { "value": [ [ "nine" ], [ "きゅう" ] ] },
+                { "value": [ [ "nine" ], [ "きゅう", "く" ] ] },
                 { "value": [ [ "ten" ], [ "じゅう" ] ] }
+            ]
+        },
+        {
+            "name": "numbers0",
+            "description": "Numbers collection 11-19",
+            "appearance": {
+                "color": "blue",
+                "emoji": "🔢"
+            },
+            "cases" : [
+                { "value": [ [ "eleven" ], [ "じゅういち" ] ] },
+                { "value": [ [ "twelve" ], [ "じゅうに" ] ] },
+                { "value": [ [ "thirteen" ], [ "じゅうさん" ] ] },
+                { "value": [ [ "fourteen" ], [ "じゅうよん" ] ] },
+                { "value": [ [ "fifteen" ], [ "じゅうご" ] ] },
+                { "value": [ [ "sixteen" ], [ "じゅうろく" ] ] },
+                { "value": [ [ "seventeen" ], [ "じゅうなな" ] ] },
+                { "value": [ [ "eighteen" ], [ "じゅうはち" ] ] },
+                { "value": [ [ "nineteen" ], [ "じゅうきゅう" ] ] }
+            ]
+        },
+        {
+            "name": "numbers1",
+            "description": "Numbers collection simple double digit numbers",
+            "appearance": {
+                "color": "blue",
+                "emoji": "🔢"
+            },
+            "cases" : [
+                { "value": [ [ "twenty" ], [ "にじゅう" ] ] },
+                { "value": [ [ "thirty" ], [ "さんじゅう" ] ] },
+                { "value": [ [ "forty" ], [ "よんじゅう" ] ] },
+                { "value": [ [ "fifty" ], [ "ごじゅう" ] ] },
+                { "value": [ [ "sixty" ], [ "ろくじゅう" ] ] },
+                { "value": [ [ "seventy" ], [ "ななじゅう" ] ] },
+                { "value": [ [ "eighty" ], [ "はちじゅう" ] ] },
+                { "value": [ [ "ninety" ], [ "きゅうじゅう" ] ] },
+                { "value": [ [ "one hundred" ], [ "ひゃく" ] ] }
             ]
         },
         {
             "name": "animals",
             "description": "This is a animal collection",
-            "appearance": "yellow",
+            "appearance": {
+                "color": "yellow",
+                "emoji": "🦁"
+            },
             "cases" : [
                 { "value": [ [ "frog" ], [ "カエル" ] ] },
                 { "value": [ [ "lion" ], [ "ライオン" ] ] },
@@ -31,7 +78,10 @@
         {
             "name": "hiragana",
             "description": "hiragana alphabet with dakuon" ,
-            "appearance": "blue",
+            "appearance": {
+                "color": "green",
+                "emoji": "🔠"
+            },
             "cases" : [
                 { "value": [ [ "あ" ], [ "a" ] ] },
                 { "value": [ [ "い" ], [ "i" ] ] },
