@@ -184,6 +184,16 @@ button.content_button {
     height: 70%;
 }
 
+#collection_select {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(38, 0, 255);
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-width: 2px;
+    text-shadow: 2px 2px 3px white;
+}
+
 div.card_variant {
     width: 90%;
     height: 30px;

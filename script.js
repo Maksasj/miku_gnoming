@@ -44,12 +44,10 @@ next_button.addEventListener("click", function (event) {
     showRandomQuestion();
 });
 
-var apply_collection_button = document.getElementById("apply_collection_button");
-apply_collection_button.addEventListener("click", function (event) {
-    var element = document.getElementById("collection_select");
-
+var html_collection_select = document.getElementById("collection_select");
+html_collection_select.addEventListener("change", function (event) {
     // Lets set active collection
-    active_collection = element.value;
+    active_collection = html_collection_select.value;
 
     showRandomQuestion();
 });
