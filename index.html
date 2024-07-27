@@ -87,26 +87,19 @@
                     <section id="content_section">
                         <p>Hey, so basically this little web application allows you to revise vocabulary of desired language.</p>
 
-                        <form action="/action_page.php">
-                            <label for="cars"><u>Choose vocabulary collection</u></label>
-                            <select id="cars" name="cars">
-                                <option value="animals">animals</option>
-                                <option value="numbers">numbers</option>
-                            </select>
-                            <input type="submit" value="Apply">
-                        </form>
+                        <span><u>Choose vocabulary collection</u></span>
+                        <select id="collection_select" name="cars"></select>
+                        <button class="content_button" id="apply_collection_button">apply</button>
 
                         <center>
                             <div id="card_holder">
-                                <div id="card_question">
-                                    What word matches 'seven' ?
-                                </div>
+                                <div id="card_question"></div>
                                 
                                 <div id="card_result">
-                                    <div class="card_variant">にじゅうに</div>
-                                    <div class="card_variant">じゅういち</div>
-                                    <div class="card_variant">に</div>
-                                    <div class="card_variant">ひゃく</div>
+                                    <div class="card_variant"></div>
+                                    <div class="card_variant"></div>
+                                    <div class="card_variant"></div>
+                                    <div class="card_variant"></div>
                                 </div>
                             </div>
                             <div id="card_streak">Streak 15/30</div>
