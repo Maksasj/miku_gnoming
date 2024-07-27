@@ -24,6 +24,7 @@ async function startApplication() {
         .then((json) => active_database = json)
         .then(() => {
             // Update UI
+            updateCollectionSelect();
             showRandomQuestion();
             updateScore();
         });
@@ -37,8 +38,19 @@ submit_button.addEventListener("click", function (event) {
     event.preventDefault();
 });
 
+// Next button
 var next_button = document.getElementById("next_button");
 next_button.addEventListener("click", function (event) {
+    showRandomQuestion();
+});
+
+var apply_collection_button = document.getElementById("apply_collection_button");
+apply_collection_button.addEventListener("click", function (event) {
+    var element = document.getElementById("collection_select");
+
+    // Lets set active collection
+    active_collection = element.value;
+
     showRandomQuestion();
 });
 
@@ -57,7 +69,30 @@ get_hint_button.addEventListener("click", function (event) {
     console.log("Todo !");
 });
 
+function resetQuestions() {
+    var elements = document.getElementsByClassName("card_variant");
+
+    for(var element of elements) {
+        element.setAttribute('id', '');
+    }
+}
+
+function updateCollectionSelect() {
+    var element = document.getElementById("collection_select");
+    let collections = active_database["collections"];
+
+    for(let i = 0; i < collections.length; ++i) {
+        let collection = collections[i];
+        let collection_name = collection["name"];
+
+        element.innerHTML += "<option value='" + i + "'>" + collection_name + "</option>";
+    }
+}
+
 function showRandomQuestion() {
+    // Before showing random question, lets reset old
+    resetQuestions();
+
     // First we get selected collection
     let collection = active_database["collections"][active_collection];
 
@@ -95,14 +130,23 @@ function showRandomQuestion() {
 
 function updateScore() {
     var card_streak = document.getElementById("card_streak");
-    card_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + (100 * score / (total_answers + 1)).toFixed(1) + "%";
+
+    var numenator = 100 * score;
+    var denominator = total_answers;
+    var percent = 0;
+
+    if(denominator !== 0)
+        percent = numenator / denominator;
+
+    card_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + percent.toFixed(1) + "%";
 }
 
 // Card match
 var card_match = document.getElementsByClassName("card_variant");
 for(var variant of card_match) {
     variant.addEventListener("click", function (event) {
-        let variant_text = event.target.innerHTML;
+        let element = event.target;
+        let variant_text = element.innerHTML;
 
         // Right answer
         if(active_answer === variant_text) {
@@ -110,7 +154,7 @@ for(var variant of card_match) {
             showRandomQuestion();
             ++score;
         } else { // Wrong answer
-
+            element.setAttribute('id', 'wrong_card_variant');
         }
 
         ++total_answers;
