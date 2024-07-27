@@ -1,6 +1,10 @@
 * {
     font-family: "ＭＳ Ｐゴシック", serif;
     letter-spacing: 1.5px;
+
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated
 }
 
 body {

@@ -1,88 +1,111 @@
 {
-    "collections": {
-        "animals": {
-            "description": "This is a animal collection",
-            "appearance": "yellow",
-            "words" : [
-                { "frog": "カエル" },
-                { "lion": "ライオン" },
-                { "panda": "パンダ"},
-                { "octopus": "タコ"}
+    "collections": [
+        {
+            "name": "numbers",
+            "description": "Number collection, 1-10",
+            "appearance": "blue",
+            "cases" : [
+                { "value": [ [ "one" ], [ "いち" ] ] },
+                { "value": [ [ "two" ], [ "に" ] ] },
+                { "value": [ [ "three" ], [ "さん" ] ] },
+                { "value": [ [ "four" ], [ "し" ] ] },
+                { "value": [ [ "five" ], [ "ご" ] ] },
+                { "value": [ [ "six" ], [ "ろく" ] ] },
+                { "value": [ [ "seven" ], [ "しち" ] ] },
+                { "value": [ [ "eight" ], [ "はち" ] ] },
+                { "value": [ [ "nine" ], [ "きゅう" ] ] },
+                { "value": [ [ "ten" ], [ "じゅう" ] ] }
             ]
         },
-        "numbers": {
-            "description": "This is a numbers collection",
+        {
+            "name": "animals",
+            "description": "This is a animal collection",
+            "appearance": "yellow",
+            "cases" : [
+                { "value": [ [ "frog" ], [ "カエル" ] ] },
+                { "value": [ [ "lion" ], [ "ライオン" ] ] },
+                { "value": [ [ "panda" ], [ "パンダ" ] ] },
+                { "value": [ [ "octopus" ], [ "タコ" ] ] }
+            ]
+        },
+        {
+            "name": "hiragana",
+            "description": "hiragana alphabet with dakuon" ,
             "appearance": "blue",
-            "words" : [
-                { 
-                    "word": "one",
-                    "variants": [ "いち" ] 
-                },
-                { 
-                    "word": "two",
-                    "variants": [ "に" ] 
-                },
-                { 
-                    "word": "three",
-                    "variants": [ "さん" ] 
-                },
-                { 
-                    "word": "four",
-                    "variants": [ "し" ] 
-                },
-                { 
-                    "word": "five",
-                    "variants": [ "ご" ] 
-                },
-                { 
-                    "word": "six",
-                    "variants": [ "ろく" ] 
-                },
-                { 
-                    "word": "seven",
-                    "variants": [ "しち" ] 
-                },
-                { 
-                    "word": "eight",
-                    "variants": [ "はち" ] 
-                },
-                {   
-                    "word": "nine",
-                    "variants": [ "きゅう" ] 
-                },
-                { 
-                    "word": "ten",
-                    "variants": [ "じゅう" ] 
-                },
-                {   
-                    "word": "eleven",
-                    "variants": [ "じゅういち" ] 
-                },
-                { 
-                    "word": "twelve",
-                    "variants": [ "じゅうに" ] 
-                },
-                { 
-                    "word": "twenty",
-                    "variants": [ "にじゅう" ] 
-                },
-                { 
-                    "word": "twenty one",
-                    "variants": [ "にじゅうに" ]
-                },
-                { 
-                    "word": "thirty",
-                    "variants": [ "さんじゅう" ] 
-                },
-                { 
-                    "word": "forty",
-                    "variants": [ "しじゅう" ] 
-                },
-                { 
-                    "word": "one hundred",
-                    "variants": [ "ひゃく" ] 
-                }
+            "cases" : [
+                { "value": [ [ "あ" ], [ "a" ] ] },
+                { "value": [ [ "い" ], [ "i" ] ] },
+                { "value": [ [ "う" ], [ "u" ] ] },
+                { "value": [ [ "え" ], [ "e" ] ] },
+                { "value": [ [ "お" ], [ "o" ] ] },
+                { "value": [ [ "か" ], [ "ka" ] ] },
+                { "value": [ [ "き" ], [ "ki" ] ] },
+                { "value": [ [ "く" ], [ "ku" ] ] },
+                { "value": [ [ "け" ], [ "ke" ] ] },
+                { "value": [ [ "こ" ], [ "ko" ] ] },
+                { "value": [ [ "さ" ], [ "sa" ] ] },
+                { "value": [ [ "し" ], [ "shi" ] ] },
+                { "value": [ [ "す" ], [ "su" ] ] },
+                { "value": [ [ "せ" ], [ "se" ] ] },
+                { "value": [ [ "そ" ], [ "so" ] ] },
+                { "value": [ [ "た" ], [ "ta" ] ] },
+                { "value": [ [ "ち" ], [ "chi" ] ] },
+                { "value": [ [ "つ" ], [ "tsu" ] ] },
+                { "value": [ [ "て" ], [ "te" ] ] },
+                { "value": [ [ "と" ], [ "to" ] ] },
+                { "value": [ [ "な" ], [ "na" ] ] },
+                { "value": [ [ "に" ], [ "ni" ] ] },
+                { "value": [ [ "ぬ" ], [ "nu" ] ] },
+                { "value": [ [ "ね" ], [ "ne" ] ] },
+                { "value": [ [ "の" ], [ "no" ] ] },
+                { "value": [ [ "は" ], [ "ha" ] ] },
+                { "value": [ [ "ひ" ], [ "hi" ] ] },
+                { "value": [ [ "ふ" ], [ "fu" ] ] },
+                { "value": [ [ "へ" ], [ "he" ] ] },
+                { "value": [ [ "ほ" ], [ "ho" ] ] },
+                { "value": [ [ "ま" ], [ "ma" ] ] },
+                { "value": [ [ "み" ], [ "mi" ] ] },
+                { "value": [ [ "む" ], [ "mu" ] ] },
+                { "value": [ [ "め" ], [ "me" ] ] },
+                { "value": [ [ "も" ], [ "mo" ] ] },
+                { "value": [ [ "や" ], [ "ya" ] ] },
+                { "value": [ [ "ゆ" ], [ "yu" ] ] },
+                { "value": [ [ "よ" ], [ "yo" ] ] },
+                { "value": [ [ "ら" ], [ "ra" ] ] },
+                { "value": [ [ "り" ], [ "ri" ] ] },
+                { "value": [ [ "る" ], [ "ru" ] ] },
+                { "value": [ [ "れ" ], [ "re" ] ] },
+                { "value": [ [ "ろ" ], [ "ro" ] ] },
+                { "value": [ [ "わ" ], [ "wa" ] ] },
+                { "value": [ [ "を" ], [ "o" ] ] },
+                { "value": [ [ "ん" ], [ "n" ] ] },
+
+                { "value": [ [ "が" ], [ "ga" ] ] },
+                { "value": [ [ "ぎ" ], [ "gi" ] ] },
+                { "value": [ [ "ぐ" ], [ "gu" ] ] },
+                { "value": [ [ "げ" ], [ "ge" ] ] },
+                { "value": [ [ "ご" ], [ "go" ] ] },
+                { "value": [ [ "ざ" ], [ "za" ] ] },
+                { "value": [ [ "じ" ], [ "ji" ] ] },
+                { "value": [ [ "ず" ], [ "zu" ] ] },
+                { "value": [ [ "ぜ" ], [ "ze" ] ] },
+                { "value": [ [ "ぞ" ], [ "zo" ] ] },
+                { "value": [ [ "だ" ], [ "da" ] ] },
+                { "value": [ [ "ぢ" ], [ "ji" ] ] },
+                { "value": [ [ "づ" ], [ "zu" ] ] },
+                { "value": [ [ "で" ], [ "de" ] ] },
+                { "value": [ [ "ど" ], [ "do" ] ] },
+                { "value": [ [ "ば" ], [ "ba" ] ] },
+                { "value": [ [ "び" ], [ "bi" ] ] },
+                { "value": [ [ "ぶ" ], [ "bu" ] ] },
+                { "value": [ [ "べ" ], [ "be" ] ] },
+                { "value": [ [ "ぼ" ], [ "bo" ] ] },
+                { "value": [ [ "ぱ" ], [ "pa" ] ] },
+                { "value": [ [ "ぴ" ], [ "pi" ] ] },
+                { "value": [ [ "ぷ" ], [ "pu" ] ] },
+                { "value": [ [ "ぺ" ], [ "pe" ] ] },
+                { "value": [ [ "ぽ" ], [ "po" ] ] }
             ]
         }
-    }
+    ]
 }

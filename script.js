@@ -12,6 +12,7 @@ function getRandomInt(max) {
 
 // Global state
 var active_answer = ""
+var active_collection = 0;
 var score = 0;
 var total_answers = 0;
 var active_database = {};
@@ -57,29 +58,39 @@ get_hint_button.addEventListener("click", function (event) {
 });
 
 function showRandomQuestion() {
-    let words = active_database["collections"]["numbers"]["words"];
-    var random_word = words[getRandomInt(words.length)]
+    // First we get selected collection
+    let collection = active_database["collections"][active_collection];
 
-    var card_variants = document.getElementsByClassName("card_variant");
-    let variant_count = card_variants.length;
+    // Next we extract random study case
+    let cases =  collection["cases"];
+    let study_case = cases[getRandomInt(cases.length)];
+    let study_case_value_length = study_case["value"].length;
 
-    var card_question = document.getElementById("card_question");
-    card_question.innerHTML = "What is right word for '" + random_word["word"] + "' ?";
+    // Third we get questioned word and answer word
+    let question = study_case["value"][0][0];
+    active_answer = study_case["value"][1][0];
+    let answers = [ active_answer ];
 
-    let variants = []
+    // We get max variant count
+    var html_variants = document.getElementsByClassName("card_variant");
+    let variant_count = html_variants.length;
 
-    variants.push(random_word["variants"][0]);
-    active_answer = random_word["variants"][0];
-
+    // Next lets get other random variants
     for(let i = 0; i < variant_count - 1; ++i) {
-        var thing = words[getRandomInt(words.length)]["variants"][0];
-        variants.push(thing);
+        let wrong_study_case = cases[getRandomInt(cases.length)];
+        let wrong_answer = wrong_study_case["value"][1];
+        answers.push(wrong_answer);
     }
 
-    shuffleArray(variants);
+    // Shuffle array
+    shuffleArray(answers);
 
-    for(let i = 0; i < variants.length; ++i)
-        card_variants[i].innerHTML = variants[i]; 
+    // There we save everything into html
+    var html_question = document.getElementById("card_question");
+    html_question.innerHTML = "What is right word for '" + question + "' ?";
+
+    for(let i = 0; i < answers.length; ++i)
+        html_variants[i].innerHTML = answers[i]; 
 }
 
 function updateScore() {
@@ -87,9 +98,9 @@ function updateScore() {
     card_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + (100 * score / (total_answers + 1)).toFixed(1) + "%";
 }
 
-// Card variants
-var card_variants = document.getElementsByClassName("card_variant");
-for(var variant of card_variants) {
+// Card match
+var card_match = document.getElementsByClassName("card_variant");
+for(var variant of card_match) {
     variant.addEventListener("click", function (event) {
         let variant_text = event.target.innerHTML;
 
