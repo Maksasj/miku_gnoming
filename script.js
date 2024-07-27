@@ -30,8 +30,8 @@ async function startApplication() {
         });
 }
 
-var submit_button = document.getElementById("submit_button");
-submit_button.addEventListener("click", function (event) {
+var html_database_load = document.getElementById("database_load");
+html_database_load.addEventListener("click", function (event) {
     var text_submit = document.getElementById("text_submit");
     const obj = JSON.parse(text_submit.value);
 
