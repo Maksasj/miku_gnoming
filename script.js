@@ -25,8 +25,13 @@ async function startApplication() {
         .then(() => {
             // Update UI
             updateCollectionSelect();
+            
+            // Update quiz game
             showRandomQuestion();
             updateScore();
+
+            // Update card game
+            showRandomCard();
         });
 }
 
@@ -196,6 +201,36 @@ for(var variant of quiz_match) {
         
         updateScore();
     });
+}
+
+// Card game
+var card = document.querySelector('.card');
+card.addEventListener('click', function() {
+    if(!card.classList.contains('flipped')) {
+        card.classList.add('flipped');
+    } else {
+        card.classList.remove('flipped');
+        setTimeout(showRandomCard, 350); // 350 is a timeout in milisecods (animation takes 700ms)
+    }
+});
+
+function showRandomCard() {
+    var card_face_front = document.getElementById("card_face_front");
+    var card_face_back = document.getElementById("card_face_back");
+
+    let collection = active_database["collections"][active_collection];
+
+    let cases = pullStudyCases(collection); 
+
+    let study_case = cases[getRandomInt(cases.length)];
+
+    let question = study_case["value"][0][0];
+    let answer = study_case["value"][1][0];
+
+    card_face_front.innerHTML = question;
+    card_face_back.innerHTML = answer;
+
+    console.log(question)
 }
 
 startApplication()
