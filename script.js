@@ -87,6 +87,42 @@ function updateCollectionSelect() {
     }
 }
 
+function getCollectionByName(collection_name) {
+    var collections = active_database["collections"]; 
+    var count = collections.length;
+
+    for(let i = 0; i < count; ++i) {
+        var collecion = collections[i];
+
+        if(collecion["name"] == collection_name)
+            return collecion;
+    }
+
+    return null;
+}
+
+function pullStudyCases(collection) {
+    let cases = [];
+
+    if(collection["cases"] !== undefined && collection["cases"] !== null)
+        cases = collection["cases"];
+
+    if(collection["include"] !== undefined && collection["include"] !== null) {
+        var includes = collection["include"];
+        var include_count = includes.length;
+
+        for(let i = 0; i < include_count; ++i) {
+            var included_collection = includes[i];
+
+            cases.push(...pullStudyCases(included_collection));
+        }
+    }
+
+    console.log(cases);
+
+    return cases;
+}
+
 function showRandomQuestion() {
     // Before showing random question, lets reset old
     resetQuestions();
@@ -94,10 +130,11 @@ function showRandomQuestion() {
     // First we get selected collection
     let collection = active_database["collections"][active_collection];
 
+    // Lets pull all study cases
+    let cases = pullStudyCases(collection); 
+
     // Next we extract random study case
-    let cases =  collection["cases"];
     let study_case = cases[getRandomInt(cases.length)];
-    let study_case_value_length = study_case["value"].length;
 
     // Third we get questioned word and answer word
     let question = study_case["value"][0][0];
