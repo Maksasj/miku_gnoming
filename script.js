@@ -214,6 +214,11 @@ card.addEventListener('click', function() {
     }
 });
 
+var card_skip_button = document.getElementById("card_skip_button");
+card_skip_button.addEventListener('click', function() {
+    showRandomCard();
+});
+
 function showRandomCard() {
     var card_face_front = document.getElementById("card_face_front");
     var card_face_back = document.getElementById("card_face_back");
@@ -229,8 +234,6 @@ function showRandomCard() {
 
     card_face_front.innerHTML = question;
     card_face_back.innerHTML = answer;
-
-    console.log(question)
 }
 
 startApplication()
