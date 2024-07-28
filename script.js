@@ -114,11 +114,9 @@ function pullStudyCases(collection) {
         for(let i = 0; i < include_count; ++i) {
             var included_collection = includes[i];
 
-            cases.push(...pullStudyCases(included_collection));
+            cases.push(...pullStudyCases(getCollectionByName(included_collection)));
         }
     }
-
-    console.log(cases);
 
     return cases;
 }
