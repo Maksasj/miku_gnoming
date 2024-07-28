@@ -1,15 +1,11 @@
 {
     "name": "Japanese",
     "description": "my japanese miku gnoming dataset",
-    "extensions": [ "mg_appearance", "mg_appearance_emoji" ],
+    "extensions": [ ],
     "collections": [
         {
             "name": "digits",
             "description": "Digits collection",
-            "appearance": {
-                "color": "blue",
-                "emoji": "🔢"
-            },
             "cases" : [
                 { "value": [ [ "one" ], [ "いち" ] ] },
                 { "value": [ [ "two" ], [ "に" ] ] },
@@ -26,10 +22,6 @@
         {
             "name": "numbers0",
             "description": "Numbers collection 11-19",
-            "appearance": {
-                "color": "blue",
-                "emoji": "🔢"
-            },
             "cases" : [
                 { "value": [ [ "eleven" ], [ "じゅういち" ] ] },
                 { "value": [ [ "twelve" ], [ "じゅうに" ] ] },
@@ -45,10 +37,6 @@
         {
             "name": "numbers1",
             "description": "Numbers collection simple double digit numbers",
-            "appearance": {
-                "color": "blue",
-                "emoji": "🔢"
-            },
             "cases" : [
                 { "value": [ [ "twenty" ], [ "にじゅう" ] ] },
                 { "value": [ [ "thirty" ], [ "さんじゅう" ] ] },
@@ -64,10 +52,6 @@
         {
             "name": "animals",
             "description": "This is a animal collection",
-            "appearance": {
-                "color": "yellow",
-                "emoji": "🦁"
-            },
             "cases" : [
                 { "value": [ [ "frog" ], [ "カエル" ] ] },
                 { "value": [ [ "lion" ], [ "ライオン" ] ] },
@@ -78,10 +62,6 @@
         {
             "name": "hiragana",
             "description": "hiragana alphabet with dakuon" ,
-            "appearance": {
-                "color": "green",
-                "emoji": "🔠"
-            },
             "cases" : [
                 { "value": [ [ "あ" ], [ "a" ] ] },
                 { "value": [ [ "い" ], [ "i" ] ] },
