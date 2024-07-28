@@ -61,7 +61,17 @@
         },
         {
             "name": "hiragana",
-            "description": "hiragana alphabet with dakuon" ,
+            "description": "All hiragana alphabet, long, double vowels, dakoun" ,
+            "include": [ 
+                "hiragana0", 
+                "hiragana_dakuon", 
+                "hiragana_double", 
+                "hiragana_long" 
+            ]
+        },
+        {
+            "name": "hiragana0",
+            "description": "Hiragana alphabet" ,
             "cases" : [
                 { "value": [ [ "あ" ], [ "a" ] ] },
                 { "value": [ [ "い" ], [ "i" ] ] },
@@ -108,8 +118,13 @@
                 { "value": [ [ "ろ" ], [ "ro" ] ] },
                 { "value": [ [ "わ" ], [ "wa" ] ] },
                 { "value": [ [ "を" ], [ "o" ] ] },
-                { "value": [ [ "ん" ], [ "n" ] ] },
-
+                { "value": [ [ "ん" ], [ "n" ] ] }
+            ]
+        },
+        {
+            "name": "hiragana_dakuon",
+            "description": "Hiragana dakuon symbols" ,
+            "cases" : [
                 { "value": [ [ "が" ], [ "ga" ] ] },
                 { "value": [ [ "ぎ" ], [ "gi" ] ] },
                 { "value": [ [ "ぐ" ], [ "gu" ] ] },
@@ -135,6 +150,83 @@
                 { "value": [ [ "ぷ" ], [ "pu" ] ] },
                 { "value": [ [ "ぺ" ], [ "pe" ] ] },
                 { "value": [ [ "ぽ" ], [ "po" ] ] }
+            ]
+        },
+        {
+            "name": "hiragana_combo",
+            "description": "Hiragana combo symbols" ,
+            "cases" : [
+                { "value": [ [ "きゃ"], [ "kya" ] ] },
+                { "value": [ [ "きゅ"], [ "kyu" ] ] },
+                { "value": [ [ "きょ"], [ "kyo" ] ] },
+                { "value": [ [ "ぎゃ"], [ "gya" ] ] },
+                { "value": [ [ "ぎゅ"], [ "gyu" ] ] },
+                { "value": [ [ "ぎょ"], [ "gyo" ] ] },
+                { "value": [ [ "しゃ"], [ "sha" ] ] },
+                { "value": [ [ "しゅ"], [ "shu" ] ] },
+                { "value": [ [ "しょ"], [ "sho" ] ] },
+                { "value": [ [ "じゃ"], [ "ja" ] ] },
+                { "value": [ [ "じゅ"], [ "ju" ] ] },
+                { "value": [ [ "じょ"], [ "jo" ] ] },
+                { "value": [ [ "ちゃ"], [ "cha" ] ] },
+                { "value": [ [ "ちゅ"], [ "chu" ] ] },
+                { "value": [ [ "ちょ"], [ "cho" ] ] },
+                { "value": [ [ "にゃ"], [ "nya" ] ] },
+                { "value": [ [ "にゅ"], [ "nyu" ] ] },
+                { "value": [ [ "にょ"], [ "nyo" ] ] },
+                { "value": [ [ "ひゃ"], [ "hya" ] ] },
+                { "value": [ [ "ひゅ"], [ "hyu" ] ] },
+                { "value": [ [ "ひょ"], [ "hyo" ] ] },
+                { "value": [ [ "びゃ"], [ "bya" ] ] },
+                { "value": [ [ "びゅ"], [ "byu" ] ] },
+                { "value": [ [ "びょ"], [ "byo" ] ] },
+                { "value": [ [ "ぴゃ"], [ "pya" ] ] },
+                { "value": [ [ "ぴゅ"], [ "pyu" ] ] },
+                { "value": [ [ "ぴょ"], [ "pyo" ] ] },
+                { "value": [ [ "みゃ"], [ "mya" ] ] },
+                { "value": [ [ "みゅ"], [ "myu" ] ] },
+                { "value": [ [ "みょ"], [ "myo" ] ] },
+                { "value": [ [ "りゃ"], [ "rya" ] ] },
+                { "value": [ [ "りゅ"], [ "ryu" ] ] },
+                { "value": [ [ "りょ"], [ "ryo" ] ] }
+            ]
+        },
+        {
+            "name": "hiragana_double",
+            "description": "Hiragana double symbols" ,
+            "cases" : [
+                { "value": [ [ "っか" ], [ "kka" ] ] },
+                { "value": [ [ "っき" ], [ "kki" ] ] },
+                { "value": [ [ "っく" ], [ "kku" ] ] },
+                { "value": [ [ "っけ" ], [ "kke" ] ] },
+                { "value": [ [ "っこ" ], [ "kko" ] ] },
+                { "value": [ [ "っさ" ], [ "ssa" ] ] },
+                { "value": [ [ "っし" ], [ "sshi" ] ] },
+                { "value": [ [ "っす" ], [ "ssu" ] ] },
+                { "value": [ [ "っせ" ], [ "sse" ] ] },
+                { "value": [ [ "っそ" ], [ "sso" ] ] },
+                { "value": [ [ "った" ], [ "tta" ] ] },
+                { "value": [ [ "っつ" ], [ "ttsu" ] ] },
+                { "value": [ [ "って" ], [ "tte" ] ] },
+                { "value": [ [ "っと" ], [ "tto" ] ] },
+                { "value": [ [ "っぱ" ], [ "ppa" ] ] },
+                { "value": [ [ "っぴ" ], [ "ppi" ] ] },
+                { "value": [ [ "っぷ" ], [ "ppu" ] ] },
+                { "value": [ [ "っぺ" ], [ "ppe" ] ] },
+                { "value": [ [ "っぽ" ], [ "ppo" ] ] }
+            ]
+        },
+        {
+            "name": "hiragana_long",
+            "description": "Hiragana long vowels" ,
+            "cases" : [
+                { "value": [ [ "ああ"], [ "aa" ] ] },
+                { "value": [ [ "いい"], [ "ii" ] ] },
+                { "value": [ [ "うう"], [ "uu" ] ] },
+                { "value": [ [ "ええ"], [ "ee" ] ] },
+                { "value": [ [ "おお"], [ "oo" ] ] },
+                { "value": [ [ "えい"], [ "ei" ] ] },
+                { "value": [ [ "おう"], [ "ou" ] ] }
             ]
         }
     ]
