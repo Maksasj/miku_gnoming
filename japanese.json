@@ -1,8 +1,27 @@
 {
     "name": "Japanese",
     "description": "my japanese miku gnoming dataset",
-    "extensions": [ ],
     "collections": [
+        {
+            "name": "numbers",
+            "description": "all digits and number" ,
+            "include": [ "digits", "numbers0", "numbers1" ]
+        },
+        {
+            "name": "hiragana",
+            "description": "All hiragana alphabet, long, double vowels, dakoun" ,
+            "include": [ "hiragana0", "hiragana_dakuon", "hiragana_double", "hiragana_long" ]
+        },
+        {
+            "name": "animals",
+            "description": "This is a animal collection",
+            "cases" : [
+                { "value": [ [ "frog" ], [ "カエル" ] ] },
+                { "value": [ [ "lion" ], [ "ライオン" ] ] },
+                { "value": [ [ "panda" ], [ "パンダ" ] ] },
+                { "value": [ [ "octopus" ], [ "タコ" ] ] }
+            ]
+        },
         {
             "name": "digits",
             "description": "Digits collection",
@@ -47,26 +66,6 @@
                 { "value": [ [ "eighty" ], [ "はちじゅう" ] ] },
                 { "value": [ [ "ninety" ], [ "きゅうじゅう" ] ] },
                 { "value": [ [ "one hundred" ], [ "ひゃく" ] ] }
-            ]
-        },
-        {
-            "name": "animals",
-            "description": "This is a animal collection",
-            "cases" : [
-                { "value": [ [ "frog" ], [ "カエル" ] ] },
-                { "value": [ [ "lion" ], [ "ライオン" ] ] },
-                { "value": [ [ "panda" ], [ "パンダ" ] ] },
-                { "value": [ [ "octopus" ], [ "タコ" ] ] }
-            ]
-        },
-        {
-            "name": "hiragana",
-            "description": "All hiragana alphabet, long, double vowels, dakoun" ,
-            "include": [ 
-                "hiragana0", 
-                "hiragana_dakuon", 
-                "hiragana_double", 
-                "hiragana_long" 
             ]
         },
         {
