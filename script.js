@@ -39,8 +39,8 @@ html_database_load.addEventListener("click", function (event) {
 });
 
 // Next button
-var next_button = document.getElementById("next_button");
-next_button.addEventListener("click", function (event) {
+var quiz_next_button = document.getElementById("quiz_next_button");
+quiz_next_button.addEventListener("click", function (event) {
     showRandomQuestion();
 });
 
@@ -68,7 +68,7 @@ get_hint_button.addEventListener("click", function (event) {
 });
 
 function resetQuestions() {
-    var elements = document.getElementsByClassName("card_variant");
+    var elements = document.getElementsByClassName("quiz_variant");
 
     for(var element of elements) {
         element.setAttribute('id', '');
@@ -105,7 +105,7 @@ function showRandomQuestion() {
     let answers = [ active_answer ];
 
     // We get max variant count
-    var html_variants = document.getElementsByClassName("card_variant");
+    var html_variants = document.getElementsByClassName("quiz_variant");
     let variant_count = html_variants.length;
 
     // Next lets get other random variants
@@ -121,7 +121,7 @@ function showRandomQuestion() {
     shuffleArray(answers);
 
     // There we save everything into html
-    var html_question = document.getElementById("card_question");
+    var html_question = document.getElementById("quiz_question");
     html_question.innerHTML = "What is right word for '" + question + "' ?";
 
     for(let i = 0; i < answers.length; ++i)
@@ -129,7 +129,7 @@ function showRandomQuestion() {
 }
 
 function updateScore() {
-    var card_streak = document.getElementById("card_streak");
+    var quiz_streak = document.getElementById("quiz_streak");
 
     var numenator = 100 * score;
     var denominator = total_answers;
@@ -138,12 +138,12 @@ function updateScore() {
     if(denominator !== 0)
         percent = numenator / denominator;
 
-    card_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + percent.toFixed(1) + "%";
+    quiz_streak.innerHTML = "Streak " + score + "/" + total_answers + " " + percent.toFixed(1) + "%";
 }
 
-// Card match
-var card_match = document.getElementsByClassName("card_variant");
-for(var variant of card_match) {
+// Quiz match
+var quiz_match = document.getElementsByClassName("quiz_variant");
+for(var variant of quiz_match) {
     variant.addEventListener("click", function (event) {
         let element = event.target;
         let variant_text = element.innerHTML;
@@ -154,7 +154,7 @@ for(var variant of card_match) {
             showRandomQuestion();
             ++score;
         } else { // Wrong answer
-            element.setAttribute('id', 'wrong_card_variant');
+            element.setAttribute('id', 'wrong_quiz_variant');
         }
 
         ++total_answers;
