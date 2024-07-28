@@ -111,7 +111,9 @@ function showRandomQuestion() {
     // Next lets get other random variants
     for(let i = 0; i < variant_count - 1; ++i) {
         let wrong_study_case = cases[getRandomInt(cases.length)];
-        let wrong_answer = wrong_study_case["value"][1];
+        let possible_wrong_answers = wrong_study_case["value"][1];
+
+        let wrong_answer = possible_wrong_answers[getRandomInt(possible_wrong_answers.length)];
         answers.push(wrong_answer);
     }
 
