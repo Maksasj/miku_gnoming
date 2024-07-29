@@ -343,4 +343,9 @@ typing_game_field.onkeydown = function(e){
     }
 }
 
+var typing_skip_button = document.getElementById('typing_skip_button');
+typing_skip_button.addEventListener('click', function() {
+    showRandomTyping();
+});
+
 startApplication()
