@@ -336,3 +336,36 @@ div.quiz_variant:hover {
 
     transform: rotateY(180deg);
 }
+
+#typing_game_field {
+    width: 80%;
+    font-size: 40px;
+    text-align: center;
+    background-color: transparent;
+    color:white;
+    margin-bottom: 10px;
+
+    border-style: ridge;
+    border-color: darkslategrey;
+    border-width: 5px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#typing_game_question {
+    width: 80%;
+    font-size: 40px;
+    text-align: center;
+    background-color: transparent;
+    color:white;
+    margin-bottom: 10px;
+
+    padding-bottom: 10px;
+}
+
+#typing_game_score {
+    display: inline;
+    font-size: 18px;
+    margin-bottom: 5px;
+}

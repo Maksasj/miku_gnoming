@@ -30,6 +30,10 @@ async function startApplication() {
             showRandomQuestion();
             updateScore();
 
+            // Typing game
+            startStopwatch();
+            showRandomTyping();
+
             // Update card game
             showRandomCard();
         });
@@ -55,6 +59,8 @@ html_collection_select.addEventListener("change", function (event) {
     active_collection = html_collection_select.value;
 
     showRandomQuestion();
+    showRandomCard();
+    showRandomTyping();
 });
 
 // Reset button
@@ -234,6 +240,107 @@ function showRandomCard() {
 
     card_face_front.innerHTML = question;
     card_face_back.innerHTML = answer;
+}
+
+// Typing game
+var startTime;
+var stopwatchInterval;
+var elapsedPausedTime = 0;
+
+function pad(number) {
+    if(number < 10) {
+        return "0" + number;
+    }
+
+    return number;
+}
+
+function padMili(number) {
+    if(number < 10) {
+        return "0" + number;
+    }
+
+    if(number < 100) {
+        return "00" + number;
+    }
+
+    return number;
+}
+
+var html_typing_game_score = document.getElementById("typing_game_score");
+
+function updateStopwatch() {
+    var currentTime = new Date().getTime(); // get current time in milliseconds
+    var elapsedTime = currentTime - startTime; // calculate elapsed time in milliseconds
+
+    var miliseconds =  Math.min(Math.max(elapsedTime % 1000, 0), 1000);
+    var seconds = Math.floor(elapsedTime / 1000) % 60;
+    var minutes = Math.floor(elapsedTime / 1000 / 60) % 60;
+    var hours = Math.floor(elapsedTime / 1000 / 60 / 60);
+
+    var displayTime = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds) + ":" + padMili(miliseconds) + " " + typing_game_score + " streak";
+    html_typing_game_score.innerHTML = displayTime;
+}
+
+function startStopwatch() {
+    if (!stopwatchInterval) {
+        startTime = new Date().getTime() - elapsedPausedTime;
+        stopwatchInterval = setInterval(updateStopwatch, 10);
+    }
+}
+
+function stopStopwatch() {
+    clearInterval(stopwatchInterval);
+    elapsedPausedTime = new Date().getTime() - startTime;
+    stopwatchInterval = null;
+}
+
+function resetStopwatch() {
+    stopStopwatch();
+    elapsedPausedTime = 0;
+
+    html_typing_game_score.innerHTML = "00:00:00:000 0 streak";
+
+    startStopwatch();
+}
+
+var typing_reset_button = document.getElementById('typing_reset_button');
+typing_reset_button.addEventListener('click', function() {
+    typing_game_score = 0;
+    resetStopwatch();
+});
+
+let typing_game_question = "";
+let typing_game_answer = "";
+let typing_game_score = 0;
+
+function showRandomTyping() {
+    var html_typing_game_question = document.getElementById('typing_game_question');
+
+    let collection = active_database["collections"][active_collection];
+
+    let cases = pullStudyCases(collection); 
+
+    let study_case = cases[getRandomInt(cases.length)];
+
+    typing_game_question = study_case["value"][0][0];
+    typing_game_answer = study_case["value"][1][0];
+
+    html_typing_game_question.innerHTML = typing_game_question;
+}
+
+var typing_game_field = document.getElementById('typing_game_field');
+typing_game_field.onkeydown = function(e){
+    if(e.keyCode == 13){
+        var answer = typing_game_field.value; 
+
+        if(answer == typing_game_answer) {
+            ++typing_game_score;
+            typing_game_field.value = "";
+
+            showRandomTyping();
+        }
+    }
 }
 
 startApplication()
