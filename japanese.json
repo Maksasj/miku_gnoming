@@ -15,7 +15,7 @@
         {
             "name": "animals",
             "description": "This is a animal collection",
-            "cases" : [
+            "cases": [
                 { "value": [ [ "frog" ], [ "カエル" ] ] },
                 { "value": [ [ "lion" ], [ "ライオン" ] ] },
                 { "value": [ [ "panda" ], [ "パンダ" ] ] },
@@ -25,7 +25,7 @@
         {
             "name": "digits",
             "description": "Digits collection",
-            "cases" : [
+            "cases": [
                 { "value": [ [ "one" ], [ "いち" ] ] },
                 { "value": [ [ "two" ], [ "に" ] ] },
                 { "value": [ [ "three" ], [ "さん" ] ] },
@@ -41,7 +41,7 @@
         {
             "name": "numbers0",
             "description": "Numbers collection 11-19",
-            "cases" : [
+            "cases": [
                 { "value": [ [ "eleven" ], [ "じゅういち" ] ] },
                 { "value": [ [ "twelve" ], [ "じゅうに" ] ] },
                 { "value": [ [ "thirteen" ], [ "じゅうさん" ] ] },
@@ -56,7 +56,7 @@
         {
             "name": "numbers1",
             "description": "Numbers collection simple double digit numbers",
-            "cases" : [
+            "cases": [
                 { "value": [ [ "twenty" ], [ "にじゅう" ] ] },
                 { "value": [ [ "thirty" ], [ "さんじゅう" ] ] },
                 { "value": [ [ "forty" ], [ "よんじゅう" ] ] },
@@ -69,9 +69,61 @@
             ]
         },
         {
+            "name": "katakana0",
+            "description": "Hiragana alphabet" ,
+            "cases": [
+                { "value": [ [ "ア" ], [ "a" ] ] },
+                { "value": [ [ "イ" ], [ "i" ] ] },
+                { "value": [ [ "ウ" ], [ "u" ] ] },
+                { "value": [ [ "エ" ], [ "e" ] ] },
+                { "value": [ [ "オ" ], [ "o" ] ] },
+                { "value": [ [ "カ" ], [ "ka" ] ] },
+                { "value": [ [ "キ" ], [ "ki" ] ] },
+                { "value": [ [ "ク" ], [ "ku" ] ] },
+                { "value": [ [ "ケ" ], [ "ke" ] ] },
+                { "value": [ [ "コ" ], [ "ko" ] ] },
+                { "value": [ [ "サ" ], [ "sa" ] ] },
+                { "value": [ [ "シ" ], [ "shi" ] ] },
+                { "value": [ [ "ス" ], [ "su" ] ] },
+                { "value": [ [ "セ" ], [ "se" ] ] },
+                { "value": [ [ "ソ" ], [ "so" ] ] },
+                { "value": [ [ "タ" ], [ "ta" ] ] },
+                { "value": [ [ "チ" ], [ "chi" ] ] },
+                { "value": [ [ "ツ" ], [ "tsu" ] ] },
+                { "value": [ [ "テ" ], [ "te" ] ] },
+                { "value": [ [ "ト" ], [ "to" ] ] },
+                { "value": [ [ "ナ" ], [ "na" ] ] },
+                { "value": [ [ "ニ" ], [ "ni" ] ] },
+                { "value": [ [ "ヌ" ], [ "nu" ] ] },
+                { "value": [ [ "ネ" ], [ "ne" ] ] },
+                { "value": [ [ "ノ" ], [ "no" ] ] },
+                { "value": [ [ "ハ" ], [ "ha" ] ] },
+                { "value": [ [ "ヒ" ], [ "hi" ] ] },
+                { "value": [ [ "フ" ], [ "fu" ] ] },
+                { "value": [ [ "ヘ" ], [ "he" ] ] },
+                { "value": [ [ "ホ" ], [ "ho" ] ] },
+                { "value": [ [ "マ" ], [ "ma" ] ] },
+                { "value": [ [ "ミ" ], [ "mi" ] ] },
+                { "value": [ [ "ム" ], [ "mu" ] ] },
+                { "value": [ [ "メ" ], [ "me" ] ] },
+                { "value": [ [ "モ" ], [ "mo" ] ] },
+                { "value": [ [ "ヤ" ], [ "ya" ] ] },
+                { "value": [ [ "ユ" ], [ "yu" ] ] },
+                { "value": [ [ "ヨ" ], [ "yo" ] ] },
+                { "value": [ [ "ラ" ], [ "ra" ] ] },
+                { "value": [ [ "リ" ], [ "ri" ] ] },
+                { "value": [ [ "ル" ], [ "ru" ] ] },
+                { "value": [ [ "レ" ], [ "re" ] ] },
+                { "value": [ [ "ロ" ], [ "ro" ] ] },
+                { "value": [ [ "ワ" ], [ "wa" ] ] },
+                { "value": [ [ "ヲ" ], [ "wo" ] ] },
+                { "value": [ [ "ン" ], [ "n" ] ] }
+            ]
+        },
+        {
             "name": "hiragana0",
             "description": "Hiragana alphabet" ,
-            "cases" : [
+            "cases": [
                 { "value": [ [ "あ" ], [ "a" ] ] },
                 { "value": [ [ "い" ], [ "i" ] ] },
                 { "value": [ [ "う" ], [ "u" ] ] },
@@ -123,7 +175,7 @@
         {
             "name": "hiragana_dakuon",
             "description": "Hiragana dakuon symbols" ,
-            "cases" : [
+            "cases": [
                 { "value": [ [ "が" ], [ "ga" ] ] },
                 { "value": [ [ "ぎ" ], [ "gi" ] ] },
                 { "value": [ [ "ぐ" ], [ "gu" ] ] },
@@ -154,7 +206,7 @@
         {
             "name": "hiragana_combo",
             "description": "Hiragana combo symbols" ,
-            "cases" : [
+            "cases": [
                 { "value": [ [ "きゃ"], [ "kya" ] ] },
                 { "value": [ [ "きゅ"], [ "kyu" ] ] },
                 { "value": [ [ "きょ"], [ "kyo" ] ] },
@@ -193,7 +245,7 @@
         {
             "name": "hiragana_double",
             "description": "Hiragana double symbols" ,
-            "cases" : [
+            "cases": [
                 { "value": [ [ "っか" ], [ "kka" ] ] },
                 { "value": [ [ "っき" ], [ "kki" ] ] },
                 { "value": [ [ "っく" ], [ "kku" ] ] },
@@ -218,7 +270,7 @@
         {
             "name": "hiragana_long",
             "description": "Hiragana long vowels" ,
-            "cases" : [
+            "cases": [
                 { "value": [ [ "ああ"], [ "aa" ] ] },
                 { "value": [ [ "いい"], [ "ii" ] ] },
                 { "value": [ [ "うう"], [ "uu" ] ] },
