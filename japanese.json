@@ -8,9 +8,19 @@
             "include": [ "digits", "numbers0", "numbers1" ]
         },
         {
+            "name": "hiragana&katakana",
+            "description": "All hiragana and katakana alphabet" ,
+            "include": [ "hiragana", "katakana" ]
+        },
+        {
             "name": "hiragana",
             "description": "All hiragana alphabet, long, double vowels, dakoun" ,
             "include": [ "hiragana0", "hiragana_dakuon", "hiragana_double", "hiragana_long" ]
+        },
+        {
+            "name": "katakana",
+            "description": "All katakana alphabet, long, double vowels, dakoun" ,
+            "include": [ "katakana0", "katakana_dakuon", "katakana_double", "katakana_long" ]
         },
         {
             "name": "animals",
