@@ -190,6 +190,31 @@
                 { "value": [ [ "リョ" ], [ "ryo" ] ] }
             ]
         },
+        { 
+            "name": "katakana_double",
+            "description": "Katakana double symbols" ,
+            "cases": [
+                { "value": [ [ "ッカ" ], [ "kka" ] ] },
+                { "value": [ [ "ッキ" ], [ "kki" ] ] },
+                { "value": [ [ "ック" ], [ "kku" ] ] },
+                { "value": [ [ "ッケ" ], [ "kke" ] ] },
+                { "value": [ [ "ッコ" ], [ "kko" ] ] },
+                { "value": [ [ "ッサ" ], [ "ssa" ] ] },
+                { "value": [ [ "ッシ" ], [ "sshi" ] ] },
+                { "value": [ [ "ッス" ], [ "ssu" ] ] },
+                { "value": [ [ "ッセ" ], [ "sse" ] ] },
+                { "value": [ [ "ッソ" ], [ "sso" ] ] },
+                { "value": [ [ "ッタ" ], [ "tta" ] ] },
+                { "value": [ [ "ッツ" ], [ "ttsu" ] ] },
+                { "value": [ [ "ッテ" ], [ "tte" ] ] },
+                { "value": [ [ "ット" ], [ "tto" ] ] },
+                { "value": [ [ "ッパ" ], [ "ppa" ] ] },
+                { "value": [ [ "ッピ" ], [ "ppi" ] ] },
+                { "value": [ [ "ップ" ], [ "ppu" ] ] },
+                { "value": [ [ "ッペ" ], [ "ppe" ] ] },
+                { "value": [ [ "ッポ" ], [ "ppo" ] ] }
+            ]
+        },
         {
             "name": "hiragana0",
             "description": "Hiragana alphabet" ,
