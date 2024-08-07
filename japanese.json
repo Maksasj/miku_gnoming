@@ -121,6 +121,37 @@
             ]
         },
         {
+            "name": "katakana_dakuon",
+            "description": "Katakana dakuon symbols" ,
+            "cases": [
+                { "value": [ [ "ガ" ], [ "ga" ] ] },
+                { "value": [ [ "ギ" ], [ "gi" ] ] },
+                { "value": [ [ "グ" ], [ "gu" ] ] },
+                { "value": [ [ "ゲ" ], [ "ge" ] ] },
+                { "value": [ [ "ゴ" ], [ "go" ] ] },
+                { "value": [ [ "ザ" ], [ "za" ] ] },
+                { "value": [ [ "ジ" ], [ "ji" ] ] },
+                { "value": [ [ "ズ" ], [ "zu" ] ] },
+                { "value": [ [ "ゼ" ], [ "ze" ] ] },
+                { "value": [ [ "ゾ" ], [ "zo" ] ] },
+                { "value": [ [ "ダ" ], [ "da" ] ] },
+                { "value": [ [ "ヂ" ], [ "ji" ] ] },
+                { "value": [ [ "ヅ" ], [ "zu" ] ] },
+                { "value": [ [ "デ" ], [ "de" ] ] },
+                { "value": [ [ "ド" ], [ "do" ] ] },
+                { "value": [ [ "バ" ], [ "ba" ] ] },
+                { "value": [ [ "ビ" ], [ "bi" ] ] },
+                { "value": [ [ "ブ" ], [ "bu" ] ] },
+                { "value": [ [ "ベ" ], [ "be" ] ] },
+                { "value": [ [ "ボ" ], [ "bo" ] ] },
+                { "value": [ [ "パ" ], [ "pa" ] ] },
+                { "value": [ [ "ピ" ], [ "pi" ] ] },
+                { "value": [ [ "プ" ], [ "pu" ] ] },
+                { "value": [ [ "ペ" ], [ "pe" ] ] },
+                { "value": [ [ "ポ" ], [ "po" ] ] }
+            ]
+        },
+        {
             "name": "hiragana0",
             "description": "Hiragana alphabet" ,
             "cases": [
