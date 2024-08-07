@@ -70,7 +70,7 @@
         },
         {
             "name": "katakana0",
-            "description": "Hiragana alphabet" ,
+            "description": "Katakana alphabet" ,
             "cases": [
                 { "value": [ [ "ア" ], [ "a" ] ] },
                 { "value": [ [ "イ" ], [ "i" ] ] },
