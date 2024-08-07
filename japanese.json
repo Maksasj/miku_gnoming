@@ -216,6 +216,17 @@
             ]
         },
         {
+            "name": "katakana_long",
+            "description": "Katakana long vowels" ,
+            "cases": [
+                { "value": [ [ "アー"], [ "aa" ] ] },
+                { "value": [ [ "イー"], [ "ii" ] ] },
+                { "value": [ [ "ウー"], [ "uu" ] ] },
+                { "value": [ [ "エー"], [ "ee" ] ] },
+                { "value": [ [ "オー"], [ "oo" ] ] }
+            ]
+        },
+        {
             "name": "hiragana0",
             "description": "Hiragana alphabet" ,
             "cases": [
